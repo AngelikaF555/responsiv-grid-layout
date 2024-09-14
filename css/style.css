@@ -1,0 +1,19 @@
+body {
+	background: url(../img/12_col.gif) center top repeat-y;
+	background-size: 90%;
+}
+
+/* mindre desktopskärmar */
+@media screen and (max-width: 1200px) {
+	
+}
+
+/* tablets */
+@media screen and (max-width: 960px) {
+	
+}
+
+/* mobiltelefoner */
+@media screen and (max-width: 768px) {
+	
+}
