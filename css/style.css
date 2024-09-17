@@ -3,8 +3,119 @@ body {
 	background-size: 90%;
 }
 
+body, main {
+	margin: 0;
+	display: grid;
+	grid-template-columns: 3fr repeat(11, 3fr 1fr) 3fr 3fr;
+	grid-template-rows: repeat(4, 150px);
+	row-gap: 10px;
+
+}
+
+header, [class*=box], section, aside, footer, [class*=footer] {
+	border: 1px solid black;
+}
+
+header {
+	grid-column: 2 / -2;
+	grid-row: 1;
+}
+
+
+
+
+main {
+	width: 100%;
+	position: absolute;
+}
+
+[class*=box] {
+	grid-row: 2;
+
+}
+
+.box1 {
+	grid-column: 2 / 5;
+}
+
+.box2 {
+	grid-column: 6 / span 15;
+}
+
+.box3 {
+	grid-column: -5 / -2;
+}
+
+.content, aside {
+	grid-row: 3 / 4;
+}
+
+.content {
+	grid-column: 2 / span 17;
+}
+
+aside {
+	grid-column: -7 / -2;
+}
+
+
+
+footer {
+	width: 99%;
+	display: grid;
+	grid-template-columns: repeat(11, 3fr 1fr) 3fr;
+	grid-template-rows: repeat(4, 150px);
+
+	grid-row: 4;
+	grid-column: 2 / -2;
+	padding: 5px;
+}
+
+[class*=footer-section] {
+	height: 90%;
+	/* lös bättre */
+}
+
+.footer-section-1 {
+	grid-column: 1 / span 5 ;
+}
+
+.footer-section-2 {
+	grid-column: 7 / span 5;
+}
+
+.footer-section-3 {
+	grid-column: 13 / span 5;
+}
+
+.footer-section-4 {
+	grid-column: -6 / -1;
+}
+
+
+
+
 /* mindre desktopskärmar */
 @media screen and (max-width: 1200px) {
+	/* .box1 {
+		grid-column: 2 / span 5;
+	}
+	
+	.box2 {
+		grid-column: 8 / 19;
+	}
+	
+	.box3 {
+		grid-column: 20 / -2;
+	}
+	
+	.content {
+		grid-column: 2 / span 17;
+	}
+	
+	aside {
+		grid-column: -7 / -2;
+	} */
 	
 }
 
