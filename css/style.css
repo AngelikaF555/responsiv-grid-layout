@@ -4,10 +4,10 @@ body {
 }
 
 body, main {
-	margin: 0;
+	margin: 10px 0;
 	display: grid;
 	grid-template-columns: 3fr repeat(11, 3fr 1fr) 3fr 3fr;
-	grid-template-rows: repeat(4, 150px); /* lös bättre höjd */
+	grid-template-rows: repeat(4, 200px);
 	row-gap: 10px;
 
 }
@@ -27,6 +27,7 @@ header {
 main {
 	width: 100%;
 	position: absolute;
+	margin: auto 0 ;
 }
 
 [class*=box] {
@@ -61,10 +62,10 @@ aside {
 
 
 footer {
-	width: 99%;
+	width: 98.8%;
 	display: grid;
 	grid-template-columns: repeat(11, 3fr 1fr) 3fr;
-	grid-template-rows: repeat(4, 150px);
+	grid-template-rows: repeat(4, 200px);
 
 	grid-row: 4;
 	grid-column: 2 / -2;
@@ -72,7 +73,7 @@ footer {
 }
 
 [class*=footer-section] {
-	height: 90%;
+	height: 93%;
 	/* lös bättre */
 }
 
@@ -116,15 +117,87 @@ footer {
 	aside {
 		grid-column: 18 / -2;
 	}
+
+	footer {
+		width: 98.8%;
+	}
 	
 }
 
 /* tablets */
 @media screen and (max-width: 960px) {
+	body {
+		grid-template-rows: repeat(5, 200px);
+	}
+
+	header {
+		grid-row: 1 / 2;
+	}
+
+	.box1 {
+		grid-column: 2 / span 7;
+	}
 	
+	.box2 {
+		grid-column: 10 / span 7;
+	}
+	
+	.box3 {
+		grid-column: span 7 / -2;
+	}
+	
+	.content {
+		grid-column: 2 / span 11;
+	}
+	
+	aside {
+		grid-column: span 11 / -2;
+	}
+
+	footer {
+		grid-row: 4 / 6;
+		width: 98.5%;
+	}
+
+	.footer-section-1, .footer-section-3 {
+		grid-column: 1 / span 11;
+		margin: 5px 0 5px 5px;
+	}
+
+	.footer-section-2, .footer-section-4{
+		grid-column: span 11 / -1;
+		margin: 5px 5px 5px 0;
+	}
 }
 
 /* mobiltelefoner */
 @media screen and (max-width: 768px) {
+	body {
+		margin: 0 6%;
+	}
 	
+	body, header, main, footer, [class*="box"], [class*="footer"], .content, aside {
+		display: block;
+	}
+	
+	header, main, footer, [class*="box"], .content, aside {
+		margin: 30px 0;
+	}
+
+	header, [class*="box"], .content, aside, [class*="footer"] {
+		height: 150px;
+	}
+
+	main {
+		position: static;
+	}
+
+	footer {
+		padding: 0;
+		width: 99.8%; /*lös bättre*/
+	}
+
+	[class*="footer"] {
+		margin: 15px 10px;
+	}
 }
