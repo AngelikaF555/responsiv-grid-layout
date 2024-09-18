@@ -61,6 +61,7 @@ aside {
 
 
 
+
 footer {
 	width: 98.8%;
 	display: grid;
@@ -74,7 +75,6 @@ footer {
 
 [class*=footer-section] {
 	height: 93%;
-	/* lös bättre */
 }
 
 .footer-section-1 {
@@ -170,7 +170,7 @@ footer {
 	}
 }
 
-/* mobiltelefoner */
+/* mobil */
 @media screen and (max-width: 768px) {
 	body {
 		margin: 0 6%;
@@ -194,7 +194,7 @@ footer {
 
 	footer {
 		padding: 0;
-		width: 99.8%; /*lös bättre*/
+		width: 99.8%;
 	}
 
 	[class*="footer"] {
